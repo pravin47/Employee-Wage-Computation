@@ -6,24 +6,25 @@ public class Emp_Wage {
 		int wage = 0;
 		final int Full_Time = 1;
 		final int Part_Time = 2;
+		final int Working_Day_PerMonth = 20;
 		int empType = (int) (Math.random() * 10) % 3;
 		int Working_hour = 0;
 
-		switch(empType) {
-		
+		switch (empType) {
+
 		case 1:
-				System.out.println("Employee Is Full Time");
-				Working_hour =8;
-				break;
-		case 2: 
-				System.out.println("Employee is part time");
-				Working_hour = 8;
-				break;
+			System.out.println("Employee Is Full Time");
+			Working_hour = 8;
+			break;
+		case 2:
+			System.out.println("Employee is part time");
+			Working_hour = 8;
+			break;
 		default:
-				System.out.println("Employee is Absent");
-				
-			}
-			wage=Wage_Per_Hour*Working_hour;
-			System.out.println("Daily Employee Wage is : " +wage);
+			System.out.println("Employee is Absent");
+
 		}
+		wage = (Working_Day_PerMonth * (Wage_Per_Hour * Working_hour));
+		System.out.println("monthly Employee Wage is : " + wage);
+	}
 }
